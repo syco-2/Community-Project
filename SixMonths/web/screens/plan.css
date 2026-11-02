@@ -1,0 +1,247 @@
+.plan-page .plan-state {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.plan-page .day-card {
+  gap: 6px;
+  padding: 16px 16px 14px;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.plan-page .day-card:hover {
+  background: var(--elevated);
+}
+
+.plan-page .day-card:active {
+  transform: scale(0.99);
+}
+
+.plan-page .day-card:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.plan-page .plan-entries {
+  padding: 4px 0 2px;
+}
+
+.plan-page .plan-entry {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.analysis-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 56px 20px 40px;
+  width: 100%;
+}
+
+.analysis-loading__ring {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: rgba(47, 128, 237, 0.1);
+  display: grid;
+  place-items: center;
+}
+
+.analysis-loading__ring .display {
+  color: var(--blue);
+}
+
+.analysis-stage {
+  color: var(--muted);
+}
+
+.analysis-stage__dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(28, 38, 51, 0.8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  flex: none;
+}
+
+.analysis-stage.is-done {
+  color: var(--text-2);
+}
+
+.analysis-stage.is-done .analysis-stage__dot {
+  background: rgba(34, 197, 94, 0.18);
+  color: var(--green);
+}
+
+.analysis-stage.is-current {
+  color: var(--text);
+}
+
+.analysis-stage.is-current .analysis-stage__dot {
+  background: rgba(47, 128, 237, 0.18);
+  color: var(--blue);
+}
+
+.score-ring {
+  position: relative;
+  width: 86px;
+  height: 86px;
+  flex: none;
+  border-radius: 50%;
+  background: conic-gradient(var(--ring) calc(var(--score) * 1%), var(--elevated) 0);
+  display: grid;
+  place-items: center;
+}
+
+.score-ring__inner {
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-radius: 50%;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.score-ring__value {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.score-ring__max {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+}
+
+.analysis-hero {
+  gap: 16px;
+}
+
+.analysis-hero-stats {
+  gap: 8px;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+
+.grade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  flex: none;
+}
+
+.grade.green {
+  background: rgba(34, 197, 94, 0.14);
+}
+
+.grade.accent {
+  background: rgba(47, 128, 237, 0.14);
+}
+
+.grade.amber {
+  background: rgba(245, 158, 11, 0.14);
+}
+
+.grade.red {
+  background: rgba(239, 68, 68, 0.14);
+}
+
+.plan-page .tick,
+.plan-page .warn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.plan-page .tick {
+  background: rgba(34, 197, 94, 0.14);
+  color: var(--green);
+}
+
+.plan-page .tick svg {
+  width: 16px;
+  height: 16px;
+}
+
+.plan-page .warn {
+  background: rgba(245, 158, 11, 0.14);
+  color: var(--amber);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.plan-page .tick--big {
+  width: 64px;
+  height: 64px;
+}
+
+.plan-page .tick--big svg {
+  width: 30px;
+  height: 30px;
+}
+
+.plan-page .verdict {
+  background: rgba(47, 128, 237, 0.12);
+  gap: 8px;
+}
+
+.plan-page .verdict.green {
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.plan-page .verdict.amber {
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.plan-page .verdict.red {
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.success-card {
+  align-items: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+}
+
+.progression-actions {
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+@media (max-width: 420px) {
+  .score-ring {
+    width: 74px;
+    height: 74px;
+  }
+
+  .score-ring__value {
+    font-size: 18px;
+  }
+}
