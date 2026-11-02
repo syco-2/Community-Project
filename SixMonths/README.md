@@ -8,10 +8,17 @@ Inspired by syco.
 
 ## Download
 
-The Android build is in this folder:
+The Android build is published as a GitHub release. This link always points to the latest
+version and starts the download right away:
 
 ```
-SixMonths.apk
+https://github.com/syco-2/Community-Project/releases/latest/download/SixMonths.apk
+```
+
+All releases:
+
+```
+https://github.com/syco-2/Community-Project/releases
 ```
 
 ## What the app does
@@ -41,5 +48,6 @@ DataStore. Nothing is uploaded, and the app has no internet permission.
 
 ## Source
 
-The source code is not part of this repository. This repository holds the APK and this
-description only. The web version and the Android source stay with the author.
+The source code is not part of this repository. This repository holds this description
+only, the APK is attached to the release. The web version and the Android source stay
+with the author.
