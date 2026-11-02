@@ -190,6 +190,7 @@ body {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -215,7 +216,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 20px 18px;
+  padding: 52px 18px 20px;
 }
 
 .card-text {
@@ -231,6 +232,13 @@ body {
   color: var(--text);
 }
 
+.app-short {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
 .app-desc {
   margin: 6px 0 0;
   min-height: 2.6em;
@@ -239,16 +247,30 @@ body {
   color: var(--text-dim);
 }
 
-.app-desc.is-logo {
+.app-logo {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
+  width: 76px;
+  height: 76px;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+  transform: translate(-50%, -50%);
 }
 
-.app-logo {
-  height: 44px;
-  width: auto;
+.app-logo img {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+html[data-theme="dark"] .app-logo {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
 }
 
 .app-inspired {

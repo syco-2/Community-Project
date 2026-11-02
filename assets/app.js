@@ -87,18 +87,7 @@
 
     var description = document.createElement("p");
     description.className = "app-desc";
-    if (entry.description) {
-      description.textContent = entry.description;
-    } else if (entry.logo) {
-      description.classList.add("is-logo");
-      var logo = document.createElement("img");
-      logo.className = "app-logo";
-      logo.src = entry.logo;
-      logo.alt = "";
-      logo.width = 96;
-      logo.height = 96;
-      description.appendChild(logo);
-    }
+    description.textContent = entry.description || "";
 
     var inspired = document.createElement("p");
     inspired.className = "app-inspired";
@@ -114,11 +103,31 @@
     var text = document.createElement("div");
     text.className = "card-text";
     text.appendChild(name);
+
+    if (entry.shortDescription) {
+      var short = document.createElement("p");
+      short.className = "app-short";
+      short.textContent = entry.shortDescription;
+      text.appendChild(short);
+    }
+
     text.appendChild(description);
 
     body.appendChild(text);
     body.appendChild(inspired);
     body.appendChild(actions);
+
+    if (entry.logo) {
+      var logoWrap = document.createElement("div");
+      logoWrap.className = "app-logo";
+      var logo = document.createElement("img");
+      logo.src = entry.logo;
+      logo.alt = "";
+      logo.width = 56;
+      logo.height = 56;
+      logoWrap.appendChild(logo);
+      item.appendChild(logoWrap);
+    }
 
     item.appendChild(thumb);
     item.appendChild(body);

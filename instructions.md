@@ -18,6 +18,17 @@ Kein AI-Slop. Keine Hero-Texte, keine Willkommens-Floskeln, keine Feature-Listen
 
 Keine Emojis im UI.
 
+## App-Card Design
+
+Jede App-Card in der Library folgt zwingend diesem Aufbau:
+
+- Oben das Thumbnail mit fester Höhe von 160px und voller Breite.
+- Das Logo sitzt als eigener Container absolut auf der Trennlinie zwischen Thumbnail und Content-Bereich: `top: 160px`, `left: 50%`, `transform: translate(-50%, -50%)`. Es hat einen eigenen Hintergrund, `border-radius: 18px` und einen weichen Schatten.
+- Der Content-Bereich beginnt unter dem Thumbnail und hat `padding-top` von mindestens 52px, damit der Name nicht vom Logo verdeckt wird.
+- Direkt unter dem Namen steht die kurze Beschreibung aus dem Feld `shortDescription`. Für jede neue App wird dieses Feld in `data/apps.js` gefüllt.
+- Darunter folgen die lange Beschreibung, die Zeile "Inspired by" und die Aktionen.
+- Kein Logo im Textfluss und kein Logo in der Beschreibungsfläche.
+
 ## Zeichen
 
 Keine Em Dashes und keine En Dashes, nirgends. Weder in Texten, noch in Kommentaren, noch in Labels, noch in Markdown. Immer Komma, Punkt, Doppelpunkt oder Klammern verwenden. Bindestriche in CSS-Klassennamen, Dateinamen oder Komposita (zum Beispiel loading-text, Blau-zu-Weiß) sind davon nicht betroffen.

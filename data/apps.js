@@ -1,6 +1,7 @@
 window.APPS = [
   {
     name: "SixMonths",
+    shortDescription: "Calisthenics training app with plan, workout player and streak.",
     description: "",
     inspiredBy: "syco",
     thumb: "SixMonths/Thumbnail.png",

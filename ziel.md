@@ -1,48 +1,41 @@
 PROMPT FÜR DIE KI (Kopiere das exakt so):
 
-Hör auf zu raten. Die React Native App für SixMonths existiert bereits vollständig im Ordner SixMonths im Hauptverzeichnis. Du musst keinen Code erfinden oder auf mich warten. Du nimmst den vorhandenen Code und setzt jetzt alle folgenden Punkte exakt um. Es gibt keine Ausreden mehr.
+Wir haben drei Aufgaben zu erledigen. Das Design der Cards muss repariert werden, die instructions.md muss geupdatet werden, und der GitHub-Push muss endlich mit dem richtigen Account funktionieren, ohne den Hauptaccount auf diesem PC zu stören. Arbeite die Punkte exakt in dieser Reihenfolge ab.
 
-Schritt 1: Die APK verschieben und verlinken
-Die fertige APK liegt auf diesem absoluten Pfad auf meinem System:
-D:\Community\SixMonths\app\build\outputs\apk\debug\app-debug.apk
-Kopiere diese Datei in den Projektordner SixMonths und benenne sie in SixMonths.apk um.
-Passe die data/apps.js so an, dass der APK-Button für SixMonths exakt auf SixMonths/SixMonths.apk verlinkt. Der Button muss in der UI sichtbar sein.
+Aufgabe 1: Das Card-Design reparieren (Logo & Layout)
+Das aktuelle Layout der App-Karten ist falsch. Das Logo darf nicht einfach unter dem Namen im Textfluss hängen. Setze das Design exakt so um:
 
-Schritt 2: Die 1-zu-1 Web-App aus dem React Native Code bauen
-Lies den kompletten React Native Code im Ordner SixMonths. Deine Aufgabe ist es, diesen Code 1-zu-1 in eine Web-App zu übersetzen (z.B. in React, wenn das dein Setup ist).
+Das Logo (App-Icon) muss genau auf der Trennlinie zwischen dem oberen Thumbnail (Screenshot) und dem unteren Content-Bereich sitzen (also halb über dem Bild, halb über dem Content).
 
-Keine Unterschiede: Jedes UI-Element, jede Funktion und jedes Design-Detail muss identisch mit der APK sein.
+Nutze dafür position: absolute auf dem Logo-Container. Er muss horizontal zentriert sein (left: 50%; transform: translateX(-50%);).
 
-Lokal: Ersetze alle nativen Speicher-Methoden (wie AsyncStorage) durch Web-Standards (localStorage oder IndexedDB). Kein Server, kein Login.
+Das Logo muss einen eigenen Hintergrund haben, abgerundete Ecken (z.B. border-radius: 16px) und einen weichen Schatten, damit es sich abhebt.
 
-Rückweg: Die Seite muss einen funktionierenden "Zur Library" Button haben.
+Der Content-Bereich darunter braucht genug Abstand nach oben (padding-top), damit der Name (z.B. "SixMonths") nicht vom Logo verdeckt wird.
 
-Schritt 3: Die Library-Karte reparieren
-In der data/apps.js für SixMonths muss stehen:
+WICHTIG: Direkt unter dem Namen kommt eine kurze, knackige Beschreibung. Füge dafür der data/apps.js das neue Feld shortDescription hinzu und schreibe für SixMonths einen passenden kurzen Satz rein (keine Emojis, keine Em Dashes).
 
-Name: "SixMonths"
+Aufgabe 2: instructions.md updaten
+Schreibe diese neue Card-Struktur (Logo schwebt auf der Trennlinie mit abgerundeten Ecken, Name darunter, kurze Beschreibung darunter) in die instructions.md unter einem neuen Punkt "App-Card Design". Das muss für alle zukünftigen Apps in diesem Projekt zwingend so umgesetzt werden.
 
-Inspired by: "syco" (exakt so, damit "Inspired by syco" angezeigt wird)
+Aufgabe 3: GitHub Push mit dem richtigen Account (syco-2)
+Wir haben ein Problem: Der PC ist global mit dem Account "spoonfulyourkitchen" angemeldet. Dieser Account muss für ein anderes Projekt unberührt bleiben. Wir stellen dieses Repository jetzt auf den Account "syco-2" um. Nutze dafür einen projektbezogenen SSH-Key:
 
-Die anderen Felder bleiben leer.
+Generiere einen neuen SSH-Key speziell für dieses Projekt:
+ssh-keygen -t ed25519 -C "syco-2-community" -f ~/.ssh/id_ed25519_syco2 -N ""
 
-Der Web-App-Button verlinkt auf "SixMonths/".
+Füge den neuen Key zum SSH-Agenten hinzu:
+ssh-add ~/.ssh/id_ed25519_syco2
 
-Der APK-Button verlinkt auf "SixMonths/SixMonths.apk".
+Lies den öffentlichen Schlüssel aus:
+cat ~/.ssh/id_ed25519_syco2.pub
 
-Schritt 4: Der GitHub Push (PFLICHT)
-Ich habe auf GitHub nachgesehen. Das Repository ist noch leer. Führe jetzt zwingend folgende Befehle im Terminal aus, um alles hochzuladen:
+STOPPE HIER und gib mir den Inhalt des öffentlichen Schlüssels aus. Ich werde ihn in meinem GitHub-Account "syco-2" unter Settings -> SSH and GPG keys hinterlegen. Warte auf mein "OK".
 
-git init
+Sobald ich das OK gebe, änderst du die Remote-URL des Repositories auf SSH:
+git remote set-url origin git@github.com:syco-2/Community-Project.git
 
-git add .
-
-git commit -m "SixMonths Web-App and APK release"
-
-git branch -M main
-
-git remote add origin https://github.com/syco-2/Community-Project.git
-
+Committe die Änderungen am Design (git add ., git commit -m "Fixed Card Layout and added SSH auth") und führe den Push aus:
 git push -u origin main
 
 REGELN (Halte dich strikt an instructions.md):
@@ -53,6 +46,6 @@ Keine Emojis im UI.
 
 Keine Em Dashes.
 
-Kein AI-Slop (keine "Welcome"-Texte, keine Slogans, keine Feature-Listen).
+Kein AI-Slop.
 
-Führe Schritt 1 bis 4 jetzt aus. Lies die vorhandenen Dateien. Wenn du fertig bist, gib mir eine kurze, sachliche Bestätigung, dass die Web-App gebaut wurde, die APK verlinkt ist und der Push erfolgreich war.
+Führe Aufgabe 1 und 2 aus und stoppe dann bei Aufgabe 3, Schritt 4, um mir den SSH-Key zu geben. Warte auf meine Bestätigung, bevor du pushst.
