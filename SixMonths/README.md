@@ -2,7 +2,17 @@
 
 SixMonths is a private calisthenics training app for one person. Every exercise, every
 training day and every set is created by the user during onboarding and can be edited at
-any time. The app ships with an empty plan.
+any time. The app ships with an empty plan, so nothing is pre-filled and the plan is
+exactly what the user built.
+
+Training runs as a circuit: one set of every exercise per round, a stopwatch with a thirty
+second lead in for timed work and a rep counter for rep work. The streak is strict, two
+freeze tokens are all the slack the app allows, and nothing counts until the session is
+finished. A weekly review asks for one confirmation per row before a load goes up, and the
+plan analysis points at the three things that are off.
+
+There is no account, no sync and no cloud. The phone holds the plan, the sessions, the
+photos of the cans and the music, and the app has no internet permission.
 
 Inspired by syco.
 
