@@ -4,45 +4,57 @@ Puddle is a party game app for a group and one phone. You add the names of every
 playing once, then pick a game. Three to twenty players, nothing to install, nothing to
 print, no account, and it works without a connection.
 
+Ten games sit on one hub, and the switch at the top moves the whole app between German and
+English. The choice is kept, so the next evening starts where the last one ended.
+
 ## Impostor
 
 Everyone gets the same secret word except the impostors, who see a hint about the word
-instead of the word. You pass the phone around so each person reads their card in private,
-then the group talks for as long as you set, describes the word without giving it away,
-and votes on who was faking it.
+instead. You pass the phone around so each person reads their card in private, then the
+group talks, describes the word without giving it away, and votes on who was faking it.
 
 Before the round you pick the categories. Ten are in the app: Kitchen, Food, Travel,
 Animals, Places, Situations, Jobs, Sports, Tech and Nature. Any number of them can be on at
 once, and the round only draws from the ones you selected. Together they hold 240 words,
 so the same round rarely comes twice. One to three impostors can be in play, the discussion
-timer runs from one to four minutes, and the score carries across rounds: the group gets a
-point each time it catches an impostor, the impostor gets two for walking free.
+timer runs from one to four minutes, and the score carries across rounds.
 
 ## Werewolf
 
-A village against a hidden pack. Roles are dealt in secret: werewolves, a seer, a doctor
-and villagers. The phone works as the moderator, so nobody has to sit out.
+A village against a hidden pack. Roles are dealt in secret, one card at a time: werewolves,
+a seer, a doctor and villagers. Every player sees their own card and what it can do, so the
+phone can moderate the whole night without anyone sitting out.
 
-Night falls and the werewolves see their pack, then choose one player to remove. The seer
-wakes and reads one player's role. The doctor wakes and protects one player. Morning
-arrives and the app says who died, or that someone was saved.
+Night falls and everyone closes their eyes. The pack wakes and picks the player it hunts.
+The seer wakes and reads one player. The doctor wakes and protects one. Morning arrives and
+the app says who died, or that the doctor was there in time, and lists who is still in.
+Then the day: the timer runs, everyone argues, and the group votes one player out. The vote
+shows what that player really was. Villagers win when the last werewolf is out, werewolves
+win when they are as many as the rest of the village. Werewolf count and the seer and the
+doctor can be turned off in the setup.
 
-Then the day: the timer runs, everyone argues, and the group votes one player out. The app
-reveals what that player was. Villagers win when the last werewolf is out. Werewolves win
-when they are as many as the rest of the village. Werewolf count and the seer and doctor
-can be turned off in the setup.
+## Card games
+
+Most Likely To, Would You Rather, Truth or Dare, Charades and Taboo hand out one card at a
+time with a next button. Truth or Dare asks for truth or dare first. Taboo shows the word
+and the words that are off limits under it.
+
+Bomb gives a category and twenty seconds. Everyone says one word that fits and passes the
+phone on, and whoever holds it at zero takes the hit. Who's the Liar hands everyone the same
+question except one player, who gets a different one. After the answers the group votes, and
+the result shows both questions. The Chooser spins through the names and picks one.
 
 ## How it plays
 
-The hub is two tiles. Tapping one takes you to the player list, where a name is typed in
-and added with the plus button, up to twenty. A name can be removed again by tapping its
-cross. Under three players the start button stays closed. Everything after that is one tap
-at a time: pass, reveal, hide, talk, vote, result.
+Tapping a game takes you to the player list, where a name is typed in and added with the
+plus button, up to twenty. A name can be removed again by tapping its cross. Under three
+players the start button stays closed. Everything after that is one tap at a time: pass,
+reveal, hide, talk, vote, result.
 
-The impostor word never stays on screen. The reveal is a single card, and the button under
-it clears the card before the phone changes hands. The timers run on the wall clock, so
-they keep counting correctly when the app is in the background. Pausing freezes the
-remaining time, resuming picks it up again.
+The secret card never stays on screen. The reveal is a single card, and the button under it
+clears the card before the phone changes hands. The timers run on the wall clock, so they
+keep counting correctly when the app is in the background. Pausing freezes the remaining
+time, resuming picks it up again.
 
 The name list and the settings are stored on the device. The web version writes to
 localStorage, the Android version writes to AsyncStorage. Nothing is sent anywhere, there
@@ -69,4 +81,4 @@ The source code is not part of this repository. This repository holds this descr
 only, the APK is attached to the release. The web version and the Android source stay
 with the author.
 
-Inspired by syco.
+Inspired by Splash.
