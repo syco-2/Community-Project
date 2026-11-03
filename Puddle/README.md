@@ -35,6 +35,10 @@ doctor can be turned off in the setup.
 
 ## Card games
 
+The result screen keeps a score per person: the village takes a point for catching an
+impostor, an impostor takes two for walking free. The score stays for the evening and goes
+back to zero when the group changes.
+
 Most Likely To, Would You Rather, Truth or Dare, Charades and Taboo hand out one card at a
 time with a next button. Truth or Dare asks for truth or dare first. Taboo shows the word
 and the words that are off limits under it.
@@ -47,7 +51,8 @@ the result shows both questions. The Chooser spins through the names and picks o
 ## How it plays
 
 Tapping a game takes you to the player list, where a name is typed in and added with the
-plus button, up to twenty. A name can be removed again by tapping its cross. Under three
+plus button, up to twenty. Each name gets a coloured initial, so a quick vote does not mean
+reading every name twice. A name can be removed again by tapping its cross. Under three
 players the start button stays closed. Everything after that is one tap at a time: pass,
 reveal, hide, talk, vote, result.
 
